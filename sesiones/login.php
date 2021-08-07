@@ -20,9 +20,17 @@ require_once('database.php');
 	$numregistro = $resultado->rowCount();
 
 	if($numregistro!=0){###Si el usuario existe
-		echo "Funciona";
+
+        session_start();## Crear una sesion
+
+        $_SESSION["Usuario"] = $_POST["mailog"];
+
+        header('Location: ../administrador.php');
+
 	}else{
+
 		header('Location: ../registro.php');
+
 	}
 
 ?>
