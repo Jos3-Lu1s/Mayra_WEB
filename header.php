@@ -19,15 +19,15 @@
 				</div>
 				<div class="col-sm-4 offset-md-1 py-4">
 					<h4 class="text-white">LOGIN</h4>
-					<form action="">
+					<form action="./sesiones/login.php" method="POST">
 						<div class="mb-3">
-							<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+							<input type="text" name="mailog" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
 						</div>
 						<div class="mb-3">
-							<input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password">
+							<input type="password" name="passlog" class="form-control" id="exampleFormControlInput1" placeholder="Password">
 						</div>
 						<div class="text-end">
-							<button type="button" class="btn btn-outline-light me-2">Login</button>
+							<button type="submit" class="btn btn-outline-light me-2">Login</button>
 							<!-- <button type="button" class="btn btn-warning">Sign-up</button> -->
 							<a href="registro.php" class="btn btn-warning">Sign-up</a>
 						</div>
