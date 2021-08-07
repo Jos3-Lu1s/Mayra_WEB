@@ -1,26 +1,28 @@
 <?php
 
-session_start();
+require_once('database.php');
 
-include_once 'database.php';
+	$sql="SELECT * FROM users WHERE email_user = :login AND password_user = :password";
 
-$mailog=$_POST['mailog'];
+	$resultado = $pdo->prepare($sql);
 
-$passlog=$_POST['passlog'];
 
-$sentencia = $pdo->prepare("SELECT * FROM users WHERE email_user = ? AND password_user = ?");
+	##htmlentities convertir cualquier simbolo en html
+	##addslashes
+	$login=htmlentities(addslashes($_POST["mailog"]));
+	$passlog=htmlentities(addslashes($_POST["passlog"]));
 
-$sentencia->execute([$mailog, $passlog]);
-$datos = $sentencia->fetch(PDO::FETCH_OBJ);
+	$resultado->bindValue(":login", $login);
+	$resultado->bindValue(":password", $passlog);
 
-##print_r($datos)
+	$resultado->execute();
 
-if($datos === false){
-    header('Location: ../registro.php');
-}
-elseif($sentencia->rowCount() == 1){
-    $_SESSION['nombre']=$datos->name_user;
-    header('Location: administrador.php');
-}
+	$numregistro = $resultado->rowCount();
+
+	if($numregistro!=0){###Si el usuario existe
+		echo "Funciona";
+	}else{
+		header('Location: ../registro.php');
+	}
 
 ?>
