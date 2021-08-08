@@ -23,7 +23,7 @@ $registros=$pdo->query("SELECT*FROM users")->fetchAll(PDO::FETCH_OBJ);
         <div class="col-lg-4 md-4 pb-3">
             <div class="card card-body">
                 <h2 class="text-center">Registrar Admin</h2>
-                <form action="registro.php" method="post" class="py-3">
+                <form action="registroAdmin.php" method="post" class="py-3">
                     <div class="row">
                         <div class="col">
                             <div class="mb-3">
