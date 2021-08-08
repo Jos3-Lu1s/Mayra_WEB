@@ -12,6 +12,8 @@ include("header.php");
 
 include("./sesiones/database.php");
 
+##solo admin
+##$registros=$pdo->query("SELECT*FROM users WHERE ID_cat = 2")->fetchAll(PDO::FETCH_OBJ);
 $registros=$pdo->query("SELECT*FROM users")->fetchAll(PDO::FETCH_OBJ);
 
 ?>
@@ -79,7 +81,7 @@ $registros=$pdo->query("SELECT*FROM users")->fetchAll(PDO::FETCH_OBJ);
                     <td><?php echo $persona->email_user ?></td>
                     <td>
                         <!-- Button trigger modal -->
-                        <a href="update.php?id=<?php echo $persona->ID_users ?> & nom=<?php echo $persona->name_user ?> & ape=<?php echo $persona->las_name?>& dir=<?php echo $persona->email_user?>"><input type="button" value="editar"></a>
+                        <a href="update.php?id=<?php echo $persona->ID_users ?> & nom=<?php echo $persona->name_user ?> & ape=<?php echo $persona->las_name?>& dir=<?php echo $persona->email_user?>& password=<?php echo $persona->password_user?>"><input type="button" value="editar"></a>
                         <a href="./CRUD/delete.php?id=<?php echo $persona->ID_users ?>"><input type="button" value="eliminar"></a>
                     </td>
                 </tr>

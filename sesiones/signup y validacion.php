@@ -46,7 +46,7 @@ if(isset($_POST['name_form'])){
             $name = $_POST['name_form'];
             $lastname = $_POST['lastname_form'];
             $email = $_POST['email_form'];
-            $password_usr = md5($_POST['password_form']);
+            $password_usr = password_hash($_POST['password_form'], PASSWORD_DEFAULT, array("cost"=>12));
             $idcat = 1;
             
             $sql = "INSERT INTO users (name_user, las_name, email_user, password_user, ID_cat) VALUES (:name_user, :las_name, :email_user, :password_user, :ID_cat)";

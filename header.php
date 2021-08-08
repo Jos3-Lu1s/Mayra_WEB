@@ -27,7 +27,7 @@
 							<input type="password" name="passlog" class="form-control" id="exampleFormControlInput1" placeholder="Password">
 						</div>
 						<div class="text-end">
-							<button type="submit" class="btn btn-outline-light me-2">Login</button>
+							<button type="submit" name="btn_login" class="btn btn-outline-light me-2">Login</button>
 							<!-- <button type="button" class="btn btn-warning">Sign-up</button> -->
 							<a href="registro.php" class="btn btn-warning">Sign-up</a>
 						</div>
