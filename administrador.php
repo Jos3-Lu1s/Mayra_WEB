@@ -6,13 +6,21 @@ if(!isset($_SESSION['Usuario'])){
     header('Location: registro.php');
 }
 
+##Crud Read
+
 include("header.php");
+
+include("./sesiones/database.php");
+
+$registros=$pdo->query("SELECT*FROM users")->fetchAll(PDO::FETCH_OBJ);
+
 ?>
 
 <div class="container p-4">
     <div class="row">
-        <div class="col md-4">
+        <div class="col-lg-4 md-4 pb-3">
             <div class="card card-body">
+                <h2 class="text-center">Registrar Admin</h2>
                 <form action="registro.php" method="post" class="py-3">
                     <div class="row">
                         <div class="col">
@@ -51,22 +59,36 @@ include("header.php");
             </div>
         </div>
         <div class="col md-8">
-            <table class="table table-bordered table-hover">
+            <table class="table table-striped table-sm table-bordered table-hover">
                 <thead>
                     <tr>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Mail</th>
-                        <th>Categoria</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
+
+                <?php
+                    foreach($registros as $persona):##Diferente nomenclatura
+                ?>
+                <tr>
+                    <td><?php echo $persona->name_user ?></td>
+                    <td><?php echo $persona->las_name ?></td>
+                    <td><?php echo $persona->email_user ?></td>
+                    <td>
+                        <!-- Button trigger modal -->
+                        <a href="update.php?id=<?php echo $persona->ID_users ?> & nom=<?php echo $persona->name_user ?> & ape=<?php echo $persona->las_name?>& dir=<?php echo $persona->email_user?>"><input type="button" value="editar"></a>
+                        <a href="./CRUD/delete.php?id=<?php echo $persona->ID_users ?>"><input type="button" value="eliminar"></a>
+                    </td>
+                </tr>
+                
+                <?php
+                    endforeach
+                ?>
+
+
                 </tbody>
             </table>
         </div>
