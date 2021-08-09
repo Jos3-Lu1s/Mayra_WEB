@@ -16,6 +16,8 @@ include("./sesiones/database.php");
 ##$registros=$pdo->query("SELECT*FROM users WHERE ID_cat = 2")->fetchAll(PDO::FETCH_OBJ);
 $registros=$pdo->query("SELECT*FROM users")->fetchAll(PDO::FETCH_OBJ);
 
+$registros_prod=$pdo->query("SELECT*FROM productos")->fetchAll(PDO::FETCH_OBJ);
+
 ?>
 
 <div class="container p-4">
@@ -147,16 +149,15 @@ $registros=$pdo->query("SELECT*FROM users")->fetchAll(PDO::FETCH_OBJ);
                 <tbody>
 
                 <?php
-                    foreach($registros as $persona):##Diferente nomenclatura
+                    foreach($registros_prod as $producto):##Diferente nomenclatura
                 ?>
                 <tr>
-                    <td><?php echo $persona->name_user ?></td>
-                    <td><?php echo $persona->las_name ?></td>
-                    <td><?php echo $persona->email_user ?></td>
+                    <td><?php echo $producto->name_prod ?></td>
+                    <td><?php echo $producto->costo_unidad ?></td>
                     <td>
                         <!-- Button trigger modal -->
-                        <a href="update.php?id=<?php echo $persona->ID_users ?> & nom=<?php echo $persona->name_user ?> & ape=<?php echo $persona->las_name?>& dir=<?php echo $persona->email_user?>& password=<?php echo $persona->password_user?>"><input type="button" value="editar"></a>
-                        <a href="./CRUD/delete.php?id=<?php echo $persona->ID_users ?>"><input type="button" value="eliminar"></a>
+                        <a href="updateproducto.php?id=<?php echo $producto->ID_producto ?> & producto=<?php echo $producto->name_prod ?> & costo=<?php echo $producto->costo_unidad?>"><input type="button" value="editar"></a>
+                        <a href="./CRUD/delete.php?id=<?php echo $producto->ID_producto ?>"><input type="button" value="eliminar"></a>
                     </td>
                 </tr>
                 

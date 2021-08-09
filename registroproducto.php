@@ -9,8 +9,8 @@ if(!empty($_POST)){
     $sql = "INSERT INTO productos (name_prod, costo_unidad) VALUES (:name_prod, :costo_unidad)";
     $query = $pdo->prepare($sql);
     $query->execute([
-        'producto'=>$producto,
-        'costo'=>$costo
+        'name_prod'=>$producto,
+        'costo_unidad'=>$costo
     ]);
 
     header("Location: administrador.php");
