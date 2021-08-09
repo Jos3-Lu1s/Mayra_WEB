@@ -20,5 +20,12 @@ constraint user_pk primary key(ID_users),
 constraint categorias_fk foreign key (ID_cat) references categorias (ID_cat)
 );
 
+create table productos(
+ID_producto int auto_increment,
+name_prod varchar (40) not null,
+costo_unidad decimal,
+constraint Productos_pk primary key(ID_Producto)
+);
 -- select * from users;
 -- select * from categorias;
+select * from productos;

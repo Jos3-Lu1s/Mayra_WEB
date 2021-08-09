@@ -67,13 +67,13 @@ if(!isset ($_POST["bot_actualizar"])){
                     <input type="email" name="dir" class="border border-0 border-bottom border-4 border-primary  form-control" id="InputEmail" aria-describedby="emailHelp" value="<?php echo $dir ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="InputPassword" class="form-label">Password</label>
-                    <input type="password" name="password" class="border border-0 border-bottom border-4 border-primary form-control" id="InputPassword" value="<?php echo $contra ?>">
+                    <!-- <label for="InputPassword" class="form-label">Password</label> -->
+                    <input type="hidden" name="password" class="border border-0 border-bottom border-4 border-primary form-control" id="InputPassword" value="<?php echo $contra ?>">
                 </div>
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                     <label for="InputPasswordc" class="form-label">Confirm Password</label>
                     <input type="password" name="cpassword_form" class="border border-0 border-bottom border-4 border-primary form-control" id="InputPasswordc">
-                </div>
+                </div> -->
                 <!-- <div class="mb-3 form-check">
                     <input type="checkbox" name="check_form" class="form-check-input" id="Check">
                     <label class="form-check-label" for="Check">Check me out</label>
