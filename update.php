@@ -1,5 +1,12 @@
 <?php
+
 include('header.php');
+
+session_start();
+
+if(!isset($_SESSION['Usuario'])){
+    header('Location: registro.php');
+}
 
 include('./sesiones/database.php');
 

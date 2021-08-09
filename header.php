@@ -20,16 +20,21 @@
 				<div class="col-sm-4 offset-md-1 py-4">
 					<h4 class="text-white">LOGIN</h4>
 					<form action="./sesiones/login.php" method="POST">
-						<div class="mb-3">
+						<div class="mb-3 me-2">
 							<input type="text" name="mailog" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
 						</div>
-						<div class="mb-3">
+						<div class="mb-3 me-2">
 							<input type="password" name="passlog" class="form-control" id="exampleFormControlInput1" placeholder="Password">
 						</div>
 						<div class="text-end">
 							<button type="submit" name="btn_login" class="btn btn-outline-light me-2">Login</button>
 							<!-- <button type="button" class="btn btn-warning">Sign-up</button> -->
-							<a href="registro.php" class="btn btn-warning">Sign-up</a>
+							<a href="registro.php" class="btn btn-warning me-2">Sign-up</a>
+							<?php
+								if(isset($_SESSION['Usuario'])){?>
+									<a href="./sesiones/logout.php" class="btn btn-danger me-2">Log-out</a>	
+							<?php ; }?>
+
 						</div>
 					</form>
 				</div>
