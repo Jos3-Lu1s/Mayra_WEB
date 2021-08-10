@@ -18,25 +18,27 @@
 					<p class="text-muted">La Panaderia MAYRA ha sido siempre un negocio preocupado por satisfacer las necesidades de sus clientes, ofreciendo siempre la máxima calidad tanto en sus productos como en sus servicios.</p>
 				</div>
 				<div class="col-sm-4 offset-md-1 py-4">
-					<h4 class="text-white">LOGIN</h4>
-					<form action="./sesiones/login.php" method="POST">
-						<div class="mb-3 me-2">
-							<input type="text" name="mailog" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-						</div>
-						<div class="mb-3 me-2">
-							<input type="password" name="passlog" class="form-control" id="exampleFormControlInput1" placeholder="Password">
-						</div>
-						<div class="text-end">
-							<button type="submit" name="btn_login" class="btn btn-outline-light me-2">Login</button>
-							<!-- <button type="button" class="btn btn-warning">Sign-up</button> -->
-							<a href="registro.php" class="btn btn-warning me-2">Sign-up</a>
-							<?php
-								if(isset($_SESSION['Usuario'])){?>
-									<a href="./sesiones/logout.php" class="btn btn-danger me-2">Log-out</a>	
-							<?php ; }?>
-
-						</div>
-					</form>
+					<?php
+						if(isset($_SESSION['Usuario'])){?>
+							<h4 class="text-white py-4"><?php echo $_SESSION['Usuario']?></h4>	
+							<a href="./sesiones/logout.php" class="btn btn-danger me-2">Log-out</a>	
+					<?php ; }
+						else{?>
+							<h4 class="text-white">LOGIN</h4>	
+							<form action="./sesiones/login.php" method="POST">
+								<div class="mb-3 me-2">
+									<input type="text" name="mailog" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+								</div>
+								<div class="mb-3 me-2">
+									<input type="password" name="passlog" class="form-control" id="exampleFormControlInput1" placeholder="Password">
+								</div>
+								<div class="text-end">
+									<button type="submit" name="btn_login" class="btn btn-outline-light me-2">Login</button>
+									<!-- <button type="button" class="btn btn-warning">Sign-up</button> -->
+									<a href="registro.php" class="btn btn-warning me-2">Sign-up</a>
+								</div>
+							</form>
+						<?php ;}?>
 				</div>
 			</div>
 		</div>
