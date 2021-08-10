@@ -8,6 +8,7 @@ if(isset($_POST['name_form'])){
     $lastname = $_POST['lastname_form'];
     $email = $_POST['email_form'];
     $password_usr = $_POST['password_form'];
+    $password_confirm = $_POST['cpassword_form'];
     
     $campos = array();
     
@@ -30,6 +31,10 @@ if(isset($_POST['name_form'])){
     if(strlen($lastname) > 15){
         array_push($campos, "Apellido demasiado grande");
     }
+    
+    if($password_usr!=$password_confirm){
+        array_push($campos, "las contraseñas no coinciden");
+    }
 
     if(count($campos) > 0){
         for($i = 0; $i < count($campos); $i++){
@@ -47,17 +52,23 @@ if(isset($_POST['name_form'])){
             $lastname = $_POST['lastname_form'];
             $email = $_POST['email_form'];
             $password_usr = $_POST['password_form'];
+            $password_confirm = $_POST['cpassword_form'];
             $idcat = 1;
+
+            if($password_usr == $password_confirm){
+                
+                $sql = "INSERT INTO users (name_user, las_name, email_user, password_user, ID_cat) VALUES (:name_user, :las_name, :email_user, :password_user, :ID_cat)";
+                $query = $pdo->prepare($sql);
+                $query->execute([
+                    'name_user'=>$name,
+                    'las_name'=>$lastname,
+                    'email_user'=>$email,
+                    'password_user'=>$password_usr,
+                    'ID_cat'=>$idcat
+                ]);
+
+            }
             
-            $sql = "INSERT INTO users (name_user, las_name, email_user, password_user, ID_cat) VALUES (:name_user, :las_name, :email_user, :password_user, :ID_cat)";
-            $query = $pdo->prepare($sql);
-            $query->execute([
-                'name_user'=>$name,
-                'las_name'=>$lastname,
-                'email_user'=>$email,
-                'password_user'=>$password_usr,
-                'ID_cat'=>$idcat
-            ]);
         }
     }
 }
