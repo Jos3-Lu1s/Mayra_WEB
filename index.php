@@ -1,5 +1,6 @@
 <?php
-include("header.php");
+session_start();
+include("header.php")
 ?>
 
 <div class="bg" style="background-image: url('https://media-public.canva.com/8RNpc/MADbgs8RNpc/2/tl.png');">

@@ -32,7 +32,7 @@ $registros_prod=$pdo->query("SELECT*FROM productos")->fetchAll(PDO::FETCH_OBJ);
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <div class="card card-body">
-                        <h2 class="text-center">Registrar Admin</h2>
+                        <h2 class="text-center">Registrar usuario</h2>
                         <form action="registroAdmin.php" method="post" class="py-3">
                             <div class="row">
                                 <div class="col">

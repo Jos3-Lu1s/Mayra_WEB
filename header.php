@@ -21,6 +21,7 @@
 					<?php
 						if(isset($_SESSION['Usuario'])){?>
 							<h4 class="text-white py-4"><?php echo $_SESSION['Usuario']?></h4>	
+							<a href="administrador.php" class="btn btn-outline-light me-2">Control</a>	
 							<a href="./sesiones/logout.php" class="btn btn-danger me-2">Log-out</a>	
 					<?php ; }
 						else{?>
