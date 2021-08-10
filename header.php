@@ -24,6 +24,11 @@
 							<a href="administrador.php" class="btn btn-outline-light me-2">Control</a>	
 							<a href="./sesiones/logout.php" class="btn btn-danger me-2">Log-out</a>	
 					<?php ; }
+						elseif(isset($_SESSION['Usuario_general'])){?>
+							<h4 class="text-white py-4"><?php echo $_SESSION['Usuario_general']?></h4>	
+							<a href="contacto.php" class="btn btn-outline-light me-2">Contactanos</a>	
+							<a href="./sesiones/logout.php" class="btn btn-danger me-2">Log-out</a>	
+							<?php ;}
 						else{?>
 							<h4 class="text-white">LOGIN</h4>	
 							<form action="./sesiones/login.php" method="POST">

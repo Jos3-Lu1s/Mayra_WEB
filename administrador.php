@@ -4,6 +4,8 @@ session_start();
 
 if(!isset($_SESSION['Usuario'])){
     header('Location: registro.php');
+}elseif(isset($_SESSION['Usuario_general'])){
+    header('Location: contacto.php');
 }
 
 ##Crud Read
