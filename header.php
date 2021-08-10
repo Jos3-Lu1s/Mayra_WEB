@@ -73,6 +73,10 @@
 					<li class="nav-item"><a href="establecimientos.php" class="nav-link active" aria-current="page">Establecimientos</a></li>
 					<li class="nav-item"><a href="nosotros.php" class="nav-link active" aria-current="page">Nosotros</a></li>
 					<li class="nav-item"><a href="contacto.php" class="nav-link active" aria-current="page">Contacto</a></li>
+					<?php
+						if(isset($_SESSION['Usuario'])){?>
+							<li class="nav-item"><a href="administrador.php" class="nav-link active" aria-current="page">CRUD</a></li>
+					<?php ; }?>
 				</ul>
 			</div>
 

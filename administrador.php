@@ -15,8 +15,9 @@ include("header.php");
 include("./sesiones/database.php");
 
 ##solo admin
-##$registros=$pdo->query("SELECT*FROM users WHERE ID_cat = 2")->fetchAll(PDO::FETCH_OBJ);
-$registros=$pdo->query("SELECT*FROM users")->fetchAll(PDO::FETCH_OBJ);
+$registros=$pdo->query("SELECT*FROM users WHERE ID_cat = 1")->fetchAll(PDO::FETCH_OBJ);
+
+$registros_ad=$pdo->query("SELECT*FROM users WHERE ID_cat = 2")->fetchAll(PDO::FETCH_OBJ);
 
 $registros_prod=$pdo->query("SELECT*FROM productos")->fetchAll(PDO::FETCH_OBJ);
 
@@ -109,8 +110,45 @@ $registros_prod=$pdo->query("SELECT*FROM productos")->fetchAll(PDO::FETCH_OBJ);
             </div>
         </div>
         <div class="col md-8">
+            <!-- administrador -->
             <table class="table table-striped table-sm table-bordered table-hover">
                 <thead>
+                    <tr class="table-dark">
+                        <td class="text-center fs-4" colspan="4">ADMINISTRADORES</td>
+                    </tr>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Mail</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                <?php
+                    foreach($registros_ad as $persona):##Diferente nomenclatura
+                ?>
+                <tr>
+                    <td><?php echo $persona->name_user ?></td>
+                    <td><?php echo $persona->las_name ?></td>
+                    <td><?php echo $persona->email_user ?></td>
+                    <td>
+                        <!-- Button trigger modal -->
+                        <a href="update.php?id=<?php echo $persona->ID_users ?> & nom=<?php echo $persona->name_user ?> & ape=<?php echo $persona->las_name?>& dir=<?php echo $persona->email_user?>& password=<?php echo $persona->password_user?>"><input type="button" value="editar"></a>
+                        <a href="./CRUD/delete.php?id=<?php echo $persona->ID_users ?>"><input type="button" value="eliminar"></a>
+                    </td>
+                </tr>
+                
+                <?php
+                    endforeach
+                ?>
+                </tbody>
+            </table>
+            <table class="table table-striped table-sm table-bordered table-hover">
+                <thead>
+                    <tr class="table-dark">
+                        <td class="text-center fs-4" colspan="4">GENERAL</td>
+                    </tr>
                     <tr>
                         <th>Nombre</th>
                         <th>Apellido</th>
@@ -142,6 +180,9 @@ $registros_prod=$pdo->query("SELECT*FROM productos")->fetchAll(PDO::FETCH_OBJ);
 
             <table class="table table-striped table-sm table-bordered table-hover">
                 <thead>
+                    <tr class="table-dark">
+                        <td class="text-center fs-4" colspan="4">PRODUCTOS</td>
+                    </tr>
                     <tr>
                         <th>Producto</th>
                         <th>Costo</th>

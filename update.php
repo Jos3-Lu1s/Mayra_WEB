@@ -42,7 +42,7 @@ if(!isset ($_POST["bot_actualizar"])){
 
 <div class="container">
     <div class="row py-4">
-        <div class="col-4 py-5 mx-auto shadow-lg p-3 mb-5 bg-body rounded">
+        <div class="col-lg-4 py-5 mx-auto shadow-lg p-3 mb-5 bg-body rounded">
             <!-- enviar informacion a la propia pagina -->
             <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" class="py-3 ">
                 <div class="row">
