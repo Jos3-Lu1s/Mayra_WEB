@@ -34,7 +34,7 @@ include("header.php")
         <img src="./img/Img_proc/1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">CONCHA</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, necessitatibus rem. Possimus minus, harum quae quasi nostrum debitis fugiat? Voluptate?</p>
+          <p class="card-text">La concha es un bizcocho esponjoso cubierto de una capa hecha tradicionalmente de manteca, harina y azúcar glass a partes iguales, y que es, sin duda, la rockstar de los panes dulces mexicanos.</p>
           <a href="#" class="btn btn-primary">Botón</a>
         </div>
       </div>
@@ -68,8 +68,8 @@ include("header.php")
       <div class="card mx-auto" style="width: 18rem;">
         <img src="./img/Img_proc/4.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Titulo</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, necessitatibus rem. Possimus minus, harum quae quasi nostrum debitis fugiat? Voluptate?</p>
+          <h5 class="card-title">OREJAS</h5>
+          <p class="card-text">Uno de los panes preferidos es la oreja brillada, lleva las piezas que necesites porque ahora son más deliciosas con una receta reformulada con extra mantequilla</p>
           <a href="#" class="btn btn-primary">Botón</a>
         </div>
       </div>

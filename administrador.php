@@ -41,34 +41,34 @@ $registros_prod=$pdo->query("SELECT*FROM productos")->fetchAll(PDO::FETCH_OBJ);
                                 <div class="col">
                                     <div class="mb-3">
                                         <label for="name" class="form-label">Name</label>
-                                        <input type="text" name="name_form" id="name" class="border border-0 border-bottom border-4 border-primary form-control" aria-describedby="textHelp">
+                                        <input required type="text" name="name_form" id="name" class="border-secondary form-control" aria-describedby="textHelp">
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="mb-3">
                                         <label for="lastname" class="form-label">Last Name</label>
-                                        <input type="text" name="lastname_form" id="lastname" class="border border-0 border-bottom border-4 border-primary form-control" aria-describedby="textHelp">
+                                        <input required type="text" name="lastname_form" id="lastname" class="border-secondary form-control" aria-describedby="textHelp">
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="InputEmail" class="form-label">Email address</label>
-                                <input type="email" name="email_form" class="border border-0 border-bottom border-4 border-primary  form-control" id="InputEmail" aria-describedby="emailHelp">
+                                <input required type="email" name="email_form" class="border-secondary form-control" id="InputEmail" aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="InputPassword" class="form-label">Password</label>
-                                <input type="password" name="password_form" class="border border-0 border-bottom border-4 border-primary form-control" id="InputPassword">
+                                <input required type="password" name="password_form" class="border-secondary form-control" id="InputPassword">
                             </div>
                             <div class="mb-3">
                                 <label for="InputPasswordc" class="form-label">Confirm Password</label>
-                                <input type="password" name="cpassword_form" class="border border-0 border-bottom border-4 border-primary form-control" id="InputPasswordc">
+                                <input required type="password" name="cpassword_form" class="border-secondary form-control" id="InputPasswordc">
                             </div>
                             <div class="mb-3 form-check">
                                 <input type="checkbox" name="check_form" class="form-check-input" id="Check">
                                 <label class="form-check-label" for="Check">Administrador</label>
                             </div>
                             <div class="d-grid gap-2">
-                                <button type="submit" value="send" class="btn btn-primary">Submit</button>
+                                <button type="submit" value="send" class="btn btn-secondary">Submit</button>
                             </div>
                         </form>
                     </div>
@@ -90,18 +90,18 @@ $registros_prod=$pdo->query("SELECT*FROM productos")->fetchAll(PDO::FETCH_OBJ);
                                     <div class="col">
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Producto</label>
-                                            <input type="text" name="producto" id="name" class="border border-0 border-bottom border-4 border-primary form-control" aria-describedby="textHelp">
+                                            <input required type="text" name="producto" id="name" class="border-secondary form-control" aria-describedby="textHelp">
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="mb-3">
                                             <label for="lastname" class="form-label">Costo unitario</label>
-                                            <input type="text" name="costo" id="lastname" class="border border-0 border-bottom border-4 border-primary form-control" aria-describedby="textHelp">
+                                            <input required type="text" name="costo" id="lastname" class="border-secondary form-control" aria-describedby="textHelp">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="d-grid gap-2">
-                                    <button type="submit" value="send" class="btn btn-primary">Submit</button>
+                                    <button type="submit" value="send" class="btn btn-secondary">Submit</button>
                                 </div>
                             </form>
                         </div>
