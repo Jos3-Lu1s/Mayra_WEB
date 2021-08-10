@@ -63,10 +63,10 @@ $registros_prod=$pdo->query("SELECT*FROM productos")->fetchAll(PDO::FETCH_OBJ);
                                 <label for="InputPasswordc" class="form-label">Confirm Password</label>
                                 <input type="password" name="cpassword_form" class="border border-0 border-bottom border-4 border-primary form-control" id="InputPasswordc">
                             </div>
-                            <!-- <div class="mb-3 form-check">
+                            <div class="mb-3 form-check">
                                 <input type="checkbox" name="check_form" class="form-check-input" id="Check">
-                                <label class="form-check-label" for="Check">Check me out</label>
-                            </div> -->
+                                <label class="form-check-label" for="Check">Administrador</label>
+                            </div>
                             <div class="d-grid gap-2">
                                 <button type="submit" value="send" class="btn btn-primary">Submit</button>
                             </div>
