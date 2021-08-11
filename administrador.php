@@ -133,7 +133,7 @@ $registros_prod=$pdo->query("SELECT*FROM productos")->fetchAll(PDO::FETCH_OBJ);
                     <td><?php echo $persona->las_name ?></td>
                     <td><?php echo $persona->email_user ?></td>
                     <td>
-                        <!-- Button trigger modal -->
+                        <!-- Mandar datos -->
                         <a href="update.php?id=<?php echo $persona->ID_users ?> & nom=<?php echo $persona->name_user ?> & ape=<?php echo $persona->las_name?>& dir=<?php echo $persona->email_user?>& password=<?php echo $persona->password_user?>"><input type="button" value="editar"></a>
                         <a href="./CRUD/delete.php?id=<?php echo $persona->ID_users ?>"><input type="button" value="eliminar"></a>
                     </td>

@@ -8,6 +8,7 @@ if(!isset($_SESSION['Usuario'])){
     header('Location: registro.php');
 }
 
+##conexion
 include('./sesiones/database.php');
 
 if(!isset ($_POST["bot_actualizar"])){

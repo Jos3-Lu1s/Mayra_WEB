@@ -20,7 +20,7 @@ include("header.php")
         <div class="col-lg-6 order-lg-1">
             <div class="p-0">
                 <h2 class="display-4">Metas</h2>
-                <p>Ser una de las mejores panadería por destacarnos en la suavidad y calidad de nuestros productos.</p>
+                <p>Ser una de las mejores panaderías por destacarnos en la suavidad y calidad de nuestros productos.</p>
                 <p>Ser destacados por la entrega puntual de los pedidos a domicilio y satisfacer la necesidad de  nuestros clientes.</p>
                 <p>Conseguir más consumidores para nuestra panadería.</p>
                 <p>Expandir el nombre y sabor de la empresa.</p>
@@ -36,13 +36,13 @@ include("header.php")
         <div class="col-md-6 py-2">
             <div class="h-100 p-5 text-white bg-dark rounded-3">
                 <h2>Misión</h2>
-                <p>Somos una empresa dedica a la elaboración de productos de panadería comprometidos con nuestros clientes en brindarles productos de gran calidad y sabor con un servicio amable y oportuno.</p>
+                <p>Somos una empresa dedica a la elaboración de productos de panadería comprometidos con nuestros clientes para brindarles productos de gran calidad, con un servicio amable y oportuno.</p>
             </div>
         </div>
         <div class="col-md-6 py-2">
             <div class="h-100 p-5 text-white bg-dark rounded-3">
                 <h2>Visión</h2>
-                <p>Servir a nuestros clientes con productos de calidad, desarrollar nuevos productos y garantizar el crecimiento y el rendimiento de la empresa y la satisfacción del cliente. Entregar el mejor pan y confitería a nuestros clientes, tratándolos siempre con respeto y seriedad.</p>
+                <p>Servir a nuestros clientes con productos de calidad, desarrollar nuevos productos, garantizar el crecimiento y el rendimiento de la empresa para la satisfacción del cliente. Entregar el mejor pan y confitería a nuestros clientes, tratándolos siempre con respeto y seriedad.</p>
             </div>
         </div>
     </div>
@@ -50,7 +50,7 @@ include("header.php")
 
 <div class="container">
     <div class="row text-center">
-        <h1 class="text-center">Objetivos</h1>
+        <h1 class="text-center">Trabajamos continuamente con nuestros clientes, y juntos creamos grandes cosas logrando resultados positivos y una plena satisfacción.</h1>
         <div class="col-md-4 py-4">
             <p class="text-dark text-left">
                 Ofrecer los servicios de panadería con diferentes presentaciones para que el consumidor no tenga la necesidad de salir de municipio para hacer sus pedidos.
