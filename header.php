@@ -72,7 +72,7 @@
 					<!-- <li><a href="index.php" class="nav-link px-2 text-white">Inicio</a></li> -->
 					<li class="nav-item"><a href="establecimientos.php" class="nav-link active" aria-current="page">Establecimientos</a></li>
 					<li class="nav-item"><a href="nosotros.php" class="nav-link active" aria-current="page">Nosotros</a></li>
-					<li class="nav-item"><a href="contacto.php" class="nav-link active" aria-current="page">Contacto</a></li>
+					<li class="nav-item"><a href="contacto.php" class="<?php if(isset($_SESSION['Usuario'])||isset($_SESSION['Usuario_general'])){echo "nav-link active";}else{echo "nav-link disabled";} ?>" aria-current="page">Contacto</a></li>
 					<?php
 						if(isset($_SESSION['Usuario'])){?>
 							<li class="nav-item"><a href="administrador.php" class="nav-link active" aria-current="page">CRUD</a></li>
